@@ -152,6 +152,8 @@ class SFTPServerInterface(paramiko.SFTPServerInterface):
 
         return paramiko.SFTP_OK
 
+    self.posix_rename = rename
+
     @returns_sftp_error
     def list_folder(self, path):
         """Looks up folder contents of `path.`"""
